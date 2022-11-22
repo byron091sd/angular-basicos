@@ -1,0 +1,27 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+
+    <div class="col">
+        <!-- [personajes] es la propiedad del hijo y se le asigna la data de "personajes" de la clases padre -->
+        <app-personajes></app-personajes> 
+        <!-- [personajesHijo]="personajes" -->
+    </div>
+
+    <div class="col">
+        <!-- <h3>Agregar</h3>
+        <hr>
+        <form (ngSubmit)= "agregar($event)">
+            <input type="text" placeholder="Nombre" [(ngModel)]="nuevo.nombre" name="nombre">   -->
+            <!-- [value]="nuevo.nombre"   entre corchetes permite emitir el evento
+            (input)="cambiarNombre($event)"  entre parentesis permite escuchar el evento--> 
+            <!-- <input type="number" placeholder="Poder" [(ngModel)]="nuevo.poder" name="poder">
+            <button type="submit">Agregar</button>
+        </form> -->
+        <app-agregar [nuevo] = "nuevo" ></app-agregar>
+            <!-- [nuevo] = "nuevo"
+            (onNuevoPersonaje)="agregarNuevoPersonaje($event)" -->
+        
+    </div>
+</div>
