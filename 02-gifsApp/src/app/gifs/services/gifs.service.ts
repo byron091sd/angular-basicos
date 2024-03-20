@@ -41,7 +41,7 @@ export class GifsService {
       localStorage.setItem('historial', JSON.stringify(this._historial));
     }
 
-    this.http.get<SearchGifsResponse>(`https://api.giphy.com/v1/gifs/search?api_key=80cAGKAUET6O9ecA9s49d7gRbxoJIgLE&q=${query}&limit=10`)//observable mejor que una promesa ?
+    this.http.get<SearchGifsResponse>(`https://api.giphy.com/v1/gifs/search?api_key=80cAGKAUET6O9ecA9s49d7gRbxoJIgLE&q=${query}&limit=12`)//observable mejor que una promesa ?
       .subscribe((resp) => {
         console.log(resp.data);
         this.resultados = resp.data;
